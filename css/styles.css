@@ -209,7 +209,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 100%;
 }
 #restaurant-name {
   color: #f18200;
@@ -291,8 +291,8 @@ nav h1 a {
     padding: 30px 15px 60px;
     text-align: center;
   }
-  #restaurants-list li {
-    width: 360px;
+  #reviews-container {
+    width: 50%;
 }
 }
 @media screen and (min-width: 500px) {
