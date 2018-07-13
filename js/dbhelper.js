@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8887;
-    return `http://localhost:${port}/data/restaurants.json`;
+    return `/data/restaurants.json`;
   }
 
   /**
