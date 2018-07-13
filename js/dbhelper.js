@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8887;
-    return `https://matthewbcool.github.io/fend-restaurant-reviews//data/restaurants.json`;
+    return `./data/restaurants.json`;
   }
 
   /**
