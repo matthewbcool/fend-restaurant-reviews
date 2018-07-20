@@ -278,9 +278,32 @@ nav h1 a {
   color: #666;
 }
 
+#main-content{
+  display: flex;
+}
+
 /* ====================== Media Queries ====================== */
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 340px) {
+
+  #breadcrumb {
+    padding: 0;
+    margin: 0;
+    line-height: 10px;
+  }
+  #reviews-list {
+    padding: 0;
+    margin: 0;
+  }
+  #restaurant-container {
+    padding: 0;
+    margin: 0;
+  }
+  #reviews-container {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+  }
   #restaurants-list {
     display: flex;
     flex-wrap: wrap;
@@ -291,9 +314,7 @@ nav h1 a {
     padding: 30px 15px 60px;
     text-align: center;
   }
-  #reviews-container {
-    width: 50%;
-}
+
 }
 @media screen and (min-width: 500px) {
   #restaurants-list {
@@ -304,6 +325,13 @@ nav h1 a {
     margin-top: 20px;
     padding: 30px 15px 60px;
     text-align: center;
+  }
+  #restaurant-container {
+    width: 50%;
+  }
+  #reviews-container {
+    width: 50%;
+    padding: .5em .5em .5em 40px;
   }
 }
 @media screen and (min-width: 400px) {
