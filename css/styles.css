@@ -284,13 +284,23 @@ nav h1 a {
 
 /* ====================== Media Queries ====================== */
 
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 900px) {
+
   #maincontent {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
   }
+  #breadcrumb {
+    width: 300px;
+    margin: auto;
+  }
+  .leaflet-control-zoom,
+  .leaflet-bar, 
+  .leaflet-control {
+    float: right;
+  }
   #restaurants-list {
     display: flex;
     flex-wrap: wrap;
@@ -301,37 +311,15 @@ nav h1 a {
     padding: 30px 15px 60px;
     text-align: center;
   }
-  #map-container {
+  .inside #map-container {
     position: relative;
-    width: 100%;
+    width: 90%;
+    height: 200px;
+    top: 140px;
+    left: 0;
+    margin: auto;
+  } 
+  .leaflet-bar {
+    background: red;
   }
-  #map {
-    position: relative;
-    width: 100%;
-  }
-
-}
-@media screen and (min-width: 500px) {
-  #restaurants-list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #f3f3f3;
-    margin-top: 20px;
-    padding: 30px 15px 60px;
-    text-align: center;
-  }
-  #restaurant-container {
-    width: 50%;
-  }
-  #reviews-container {
-    width: 50%;
-    padding: .5em .5em .5em 40px;
-  }
-}
-@media screen and (min-width: 400px) {
-  
-}
-@media screen and (min-width: 400px) {
-  
 }
