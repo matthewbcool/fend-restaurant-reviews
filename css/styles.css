@@ -247,7 +247,7 @@ nav h1 a {
   width: 50%;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 10px 80px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -293,14 +293,10 @@ nav h1 a {
     justify-content: center;
   }
   #breadcrumb {
-    width: 300px;
+    width: calc(100%);;
     margin: auto;
   }
-  .leaflet-control-zoom,
-  .leaflet-bar, 
-  .leaflet-control {
-    float: right;
-  }
+
   #restaurants-list {
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +307,15 @@ nav h1 a {
     padding: 30px 15px 60px;
     text-align: center;
   }
+  #restaurant-container {
+    margin: auto;
+  }
+
+  #reviews-container {
+    margin: auto;
+    width: 90%;
+    padding: 0.3em;
+  }
   .inside #map-container {
     position: relative;
     width: 90%;
@@ -319,7 +324,7 @@ nav h1 a {
     left: 0;
     margin: auto;
   } 
-  .leaflet-bar {
-    background: red;
+  #map-container {
+    z-index: 1;
   }
 }
