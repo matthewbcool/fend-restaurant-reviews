@@ -1,4 +1,4 @@
-#To run:
+# To run:  
 Site is hosted on github: https://matthewbcool.github.io/fend-restaurant-reviews/
 
 ## Leaflet.js and Mapbox:
