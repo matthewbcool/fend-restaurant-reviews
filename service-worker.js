@@ -35,7 +35,13 @@
   
   
     self.addEventListener('fetch', function(event) {
-      console.log('fetching seems to be working...');
+      event.respondWith(
+        caches.match(event.request).then(function(response) {
+          if (response) return response;
+          return fetch(event.request);
+        })
+      );
     });
+  
   
   })();
