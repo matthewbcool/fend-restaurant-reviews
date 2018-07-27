@@ -26,6 +26,7 @@
           );
         })
       );
+      self.skipWaiting();
       console.log('cache complete');
     });
     
