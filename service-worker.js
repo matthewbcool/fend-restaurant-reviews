@@ -43,6 +43,7 @@
         })
       );
       */
+     console.log('fetching')
     });
   
   
