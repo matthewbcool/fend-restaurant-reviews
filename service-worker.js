@@ -36,31 +36,16 @@
   
   
     self.addEventListener('fetch', function(event) {
-/* Just like with the install event, event.waitUntil blocks activate on a promise.
-     Activation will fail unless the promise is fulfilled.
-  */
- console.log('WORKER: activate event in progress.');
-
- event.waitUntil(
-   caches
-     /* This method returns a promise which will resolve to an array of available
-        cache keys.
-     */
-     .keys()
-     .then(function (keys) {
-       // We return a promise that settles when all outdated caches are deleted.
-       return Promise.all(
-         keys
-           .filter(function (key) {
-             // Filter by keys that don't start with the latest version prefix.
-             return !key.startsWith('rw');
-           })
-       );
-     })
-     .then(function() {
-       console.log('WORKER: activate completed.');
-     })
- );
+      event.respondWith(
+        caches.open(cacheName).then(function(cache) {
+          return cache.match(event.request).then(function (response) {
+            return response || fetch(event.request).then(function(response) {
+              cache.put(event.request, response.clone());
+              return response;
+            });
+          });
+        })
+      );
     });
   
   
