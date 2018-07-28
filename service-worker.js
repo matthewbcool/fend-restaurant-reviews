@@ -53,13 +53,7 @@
          keys
            .filter(function (key) {
              // Filter by keys that don't start with the latest version prefix.
-             return !key.startsWith(cacheName);
-           })
-           .map(function (key) {
-             /* Return a promise that's fulfilled
-                when each outdated cache is deleted.
-             */
-             return caches.delete(key);
+             return !key.startsWith('rw');
            })
        );
      })
